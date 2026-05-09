@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Brand colours (oklch for perceptual uniformity) ─ */
+  --color-brand: oklch(0.55 0.22 265);
+  --color-brand-hover: oklch(0.48 0.22 265);
+  --color-brand-light: oklch(0.93 0.06 265);
+
+  /* ─── Surface tokens ─────────────────────────────────── */
+  --color-surface: oklch(0.97 0.005 265);
+  --color-card: oklch(1 0 0);
+
+  /* ─── Status colours ─────────────────────────────────── */
+  --color-success: oklch(0.62 0.18 145);
+  --color-warning: oklch(0.75 0.16 65);
+  --color-error: oklch(0.59 0.22 27);
+
+  /* ─── Typography ─────────────────────────────────────── */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* ─── Radius tokens ──────────────────────────────────── */
+  --radius-card: 1rem;
+  --radius-btn: 0.75rem;
+
+  /* ─── Shadows ────────────────────────────────────────── */
+  --shadow-card: 0 1px 3px 0 oklch(0 0 0 / 0.08), 0 1px 2px -1px oklch(0 0 0 / 0.06);
+
+  /* ─── Animations ─────────────────────────────────────── */
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-slide-up: slide-up 0.25s ease-out;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    from { transform: translateY(8px); opacity: 0; }
+    to   { transform: translateY(0);   opacity: 1; }
+  }
+}
+
+/* ─── Base resets ────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--color-surface);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Smooth scroll ──────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Focus ring ─────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid oklch(0.55 0.22 265);
+  outline-offset: 2px;
+}

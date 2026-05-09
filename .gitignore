@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+
+# Convex generated
+apps/web/convex/_generated/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Test artifacts
+scripts/test-docs/*.jpg
+scripts/test-docs/*.jpeg
+scripts/test-docs/*.png
+scripts/test-docs/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,15 @@
+{
+  "name": "wiza",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @wiza/web dev",
+    "build": "pnpm --filter @wiza/web build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "convex:dev": "pnpm --filter @wiza/web convex:dev",
+    "convex:deploy": "pnpm --filter @wiza/web convex:deploy"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
